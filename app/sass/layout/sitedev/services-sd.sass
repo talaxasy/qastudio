@@ -1,0 +1,198 @@
+/* Section (services) */
+.service-block
+	display: flex
+	background: #fff
+	margin: 40px 0
+	padding: 30px
+	box-shadow: 1px 1px 18px 2px rgba(0,0,0,.1)
+	border-radius: 20px
+
+.service-content
+	display: flex
+	flex-direction: column
+	width: 50%
+	justify-content: flex-start
+	padding-right: 50px
+	&:last-child
+		flex-direction: row
+		padding-right: 0
+	h3
+		font-size: 36px
+		font-weight: 400
+		line-height: 0
+
+.service-content__inner
+	height: 50%
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	&:first-child
+		justify-content: flex-start
+
+.service-info
+	width: 55%
+	&:last-child
+		width: 45%
+
+.service-info-text
+	ul
+		margin: 0 auto
+		padding-left: 16px
+		max-width: 280px
+
+.service-content-text
+	font-size: 18px
+	margin-top: 36px
+
+.service-info-title
+	text-align: center
+	font-size: 22px
+	&:after
+		content: ""
+		display: block
+		width: 70px
+		height: 2.5px
+		border-radius: 2px
+		background: $accent
+		margin: 20px auto
+		z-index: 1
+	h4
+		font-weight: 400
+		line-height: 0
+
+.service-icon, .service-icon-big
+	font-size: 28px
+	padding-right: 10px
+	color: transparent!important
+	-webkit-background-clip: text
+	background-image: linear-gradient(to bottom, #FFC72A, #FFAE23)
+
+.service-icon-big
+	font-size: 34px
+
+.service-btns
+	margin-top: 30px
+
+.service-btn
+	z-index: 2
+	display: block
+	text-decoration: none
+	overflow: hidden
+	position: relative
+	min-width: 170px
+	border-radius: 5px
+	cursor: pointer
+	text-transform: uppercase
+	color: #fff
+	font-size: 16px
+	font-weight: bold
+	text-align: center
+	padding: 10px 8px
+	span
+		position: relative
+		z-index: 2
+	&:after, &:before
+		content: ""
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+	&:after
+		background: linear-gradient( -45deg, rgba(252,227,138,.9) 0, rgba(243,129,129,.9))
+	&:before
+		background: linear-gradient( 45deg, rgba(252,227,138,.9) 0, rgba(243,129,129,.9))
+		opacity: 0
+		z-index: 1
+		transition: all .3s ease-in-out
+	&:hover:before
+		opacity: 1
+	&:focus
+		outline: 0
+
+.service-price
+	padding-top: 30px
+	position: relative
+	display: flex
+	justify-content: flex-start
+	flex-direction: row
+
+.price
+	display: block
+	font-size: 28px
+	margin-right: 40px
+
+.price-info
+	text-align: center
+	display: block
+	opacity: .8
+	font-size: 14px
+	width: 100%
+	max-width: 200px
+
+
+// MEDIA here
+@media screen and (max-width: 1250px)
+	.service-block
+		flex-direction: column
+		max-width: 650px
+		margin: 40px auto
+	.service-content
+		width: 100%
+		padding: 0
+		align-items: center
+		&:last-child
+			align-items: flex-start
+			margin-top: 40px
+			padding-top: 40px
+			border-top: 1px rgba(black, .2) solid
+	.service-info-text ul 
+		max-width: 260px
+	.service-price
+		flex-direction: column
+		justify-content: space-around
+		height: 150px
+	.price
+		margin-right: 0
+		text-align: center
+	.service-content-text
+		text-align: center
+	.price-info
+		margin: 0 auto
+
+@media screen and (max-width: 685px)
+	.service-content
+		h3
+			font-size: 30px
+			display: flex
+			flex-direction: column
+			min-height: 70px
+			align-items: center
+			justify-content: space-between
+		&:last-child
+			flex-direction: column
+	.service-info
+		width: 100%
+		&:first-child
+			margin-bottom: 40px
+		&:last-child
+			width: 100%
+	.service-icon-big
+		font-size: 34px
+		padding-right: 0
+
+@media screen and (max-width: 360px)
+	.service-info-title
+		h4
+			line-height: 1
+	.service-content
+		h3
+			font-size: 26px
+			line-height: 1.2
+			text-align: center
+	.service-content-text 
+		font-size: 16px
+	.service-content-text
+		margin-top: 22px
+
+

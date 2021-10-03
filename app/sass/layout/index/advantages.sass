@@ -1,0 +1,90 @@
+/* Section (about) */
+.section--adv
+	background: #fff
+	padding-bottom: 0
+
+.adv
+	display: flex
+	flex-wrap: nowrap
+	align-items: stretch
+	justify-content: space-between
+	padding-bottom: 40px
+
+.adv__img
+	width: 80%
+	max-width: 360px
+	height: auto
+
+.trophy_fit
+	width: 65%
+
+.adv__content
+	display: flex
+	flex-direction: column
+	justify-content: center
+	text-align: left
+	height: auto
+	max-width: 750px
+
+.adv__content-left
+	order: 0
+	margin-right: 48px
+	margin-left: 0
+	display: flex
+	align-items: flex-start
+
+.adv__content-right
+	order: 1
+	margin-left: 48px
+	margin-right: 0
+	display: flex
+	align-items: flex-end
+
+.adv__title
+	font-size: 26px
+	font-weight: normal
+	margin-bottom: 30px
+
+.advent__text
+	font-size: 22px
+	font-weight: 300
+
+
+// MEDIA here
+@media screen and (max-width: 1330px)
+	.section--adv
+		padding-bottom: 0
+
+@media screen and (max-width: 880px)
+	.advent__text
+		font-size: 18px
+	.trophy_fit
+		width: 70%
+
+@media screen and (max-width: 750px)
+	.adv 
+		flex-direction: column
+		align-items: center
+	.adv__content-left, .adv__content-right
+		all: initial
+	.adv__img
+		max-width: 190px
+	.adv__content
+		text-align: center
+		align-items: center
+
+@media screen and (max-width: 430px)
+	.adv__title
+		font-size: 22px
+	.advent__text
+		font-size: 18px
+
+@media screen and (max-width: 360px)
+	.adv__title
+		font-size: 20px
+	.advent__text
+		font-size: 16px
+
+@media screen and (max-width: 980px)
+	.section--portfolio
+		padding-bottom: 0

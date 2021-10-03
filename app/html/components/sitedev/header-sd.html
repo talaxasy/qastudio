@@ -1,0 +1,57 @@
+<header id="main">
+<header class="header">
+	<div class="container">
+		<div class="header-top">
+			<div class="logo">
+				<a href="/"><img src="img/@2x/logo.png" alt="logo" class="img-responsive"></a>
+			</div>
+			<nav class="nav">
+				<a class="nav__link" href="/">Главная</a>
+				<a class="nav__link" href="/#services-trigger">Услуги</a>
+				<a class="nav__link" href="/#about">О нас</a>
+				<a class="nav__link" href="/#power">Преимущества</a>
+				<a class="nav__link" href="/#contact">Контакты</a>
+			</nav>
+			<div class="mobile-menu">
+				<div class="burger-fragments"></div>
+			</div>
+			<div class="phone">
+				<a id="desktop-modal" href="tel:+375295919180" data-modal="#modal1" class="modal-mobile open-modal">
+					<p id="call-me">+375 (29) 591-91-80</p>
+					<p class="phone-text">Проконсультироваться</p>
+				</a>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="preview preview--sitedev">
+	<div class="preview_overlay overlay--sitedev"></div>
+	<div class="container">
+		<div class="preview-titles">
+			<h1 class="preview__title preview__title--sitedev"><span style="color: #fda316;">Разработка</span> веб-сайтов</h1>
+			<a class="prev-sd-btn" href="#" data-scroll="#services-trigger">Посмотреть</a>
+		</div>
+	</div>
+	<div class="start-arrow" data-scroll="#services-trigger"><i class="fa fa-angle-double-down" aria-hidden="true"></i></div>
+</div>
+
+<div class="modal__overlay">
+	<div class="modal" id="modal1">
+		<div class="modal__content">
+			<a class="modal-btn close-modal" data-modal="#modal1" href="#"><i class="fa fa-times" aria-hidden="true"></i></a>
+			<h1 class="title">Оставить заявку</h1>
+			<form class="modal__apl" name="form" method="post">
+				<input type="hidden" name="project_name" value="qastudio.by">
+				<input type="hidden" name="admin_email" value="info@qastudio.by">
+				<input type="hidden" name="form_subject" value="Заявка с QAstudio (ст. 'Разработка сайтов') в модальном окне">
+
+				<input class="modal__input" type="text" name="name" placeholder="Имя">
+				<input class="modal__input" type="tel" name="phone" placeholder="Телефон" required>
+
+				<button class="modal-btn" type="submit"><span>отправить</span></button>
+			</form>
+		</div>	
+	</div>
+</div>
+

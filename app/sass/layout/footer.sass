@@ -1,0 +1,62 @@
+/* Section (footer) */
+.section--footer
+	background: url(/img/@2x/bg.png) no-repeat top #fff
+	padding: 185px 0 39px 0
+
+.section--footer-sd
+	background: url(/img/@2x/bg_sitedev.png) no-repeat top #f7f8fc
+
+.footer
+	text-align: center
+	p
+		text-shadow: 0 0 40px black, 0 0 10px black
+		padding-top: 15px
+		font-size: 18px
+		color: #fff
+	span
+		padding: 5px 0
+		display: block
+		font-size: 18px
+		color: #fff
+	.fa
+		font-size: 26px
+		color: white
+		padding: 3px 5px
+		&:hover
+			cursor: pointer
+			background: linear-gradient( 0deg, rgba(252,227,138,.9) 0, rgba(243,129,129,1))
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+			color: #fff
+
+
+// MEDIA here
+@media screen and (min-width: 2040px)
+	.section--footer
+		background-size: cover
+
+@media screen and (min-width: 3000px)
+	.section--footer
+		padding: 245px 0 39px 0
+
+@media screen and (min-width: 4500px)
+	.section--footer
+		padding: 345px 0 39px 0
+
+@media screen and (max-width: 1000px)
+	.section--footer
+		padding: 160px 0 19px 0
+
+@media screen and (max-width: 556px)
+	.footer
+		p
+			font-size: 16px
+
+@media screen and (max-width: 730px)
+	.section--footer
+		background-position: unset
+		padding: 85px 0 19px 0
+
+
+
+

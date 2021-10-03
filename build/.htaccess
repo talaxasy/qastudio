@@ -1,0 +1,31 @@
+ErrorDocument 404 http://www.qastudio.by/404.html
+
+
+
+#Включает отслеживание сим-ссылок
+Options +FollowSymLinks
+#Запускает url_rewriting
+RewriteEngine On
+
+#Убирает .html в конце URL
+RewriteBase /
+RewriteRule (.*)\.html$ $1 [R=301,L]
+
+#Блокирует все ссылки, содержащие <script>
+RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
+#Блокирует все скрипты, которые пытаются изменить переменные PHP Globals:
+RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+#Блокирует все скрипты, которые пытаются изменить переменную _REQUEST:
+RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
+
+#Запрещает просмотр содержимого папки
+Options All -Indexes
+
+#Сжатие
+FileETag MTime Size
+<ifmodule mod_expires.c>
+<filesmatch ".(jpg|jpeg|gif|png|ico|css|js)$">
+ExpiresActive on
+ExpiresDefault "access plus 1 month"
+</filesmatch>
+</ifmodule>

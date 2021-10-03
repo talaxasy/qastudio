@@ -1,0 +1,103 @@
+/* Section (services) */
+.section--services
+	padding-top: 50px
+	padding-bottom: 0
+	z-index: 1
+
+.service-btn
+	font-size: 14px
+	position: relative
+	overflow: hidden
+	color: $text
+	padding: 6px 22px
+	border: 2px $accent solid
+	border-radius: 3px
+	text-transform: uppercase
+	transition: 1s cubic-bezier(.165,.84,.44,1)
+	font-weight: 700
+	&:before
+		content: ""
+		position: absolute
+		right: 0
+		top: 0
+		height: 100%
+		width: 0
+		z-index: -1
+		color: white
+		background: $accent
+		transition: 1s cubic-bezier(.165,.84,.44,1)
+	&:hover:before
+		width: 100%
+		right: auto
+		left: 0%
+
+.services
+	padding-top: 35px
+	width: 100%
+	display: flex
+	flex-wrap: wrap
+	z-index: 2
+
+.service__item
+	position: relative
+	width: 33.33333%
+	padding: 0 35px 70px 85px
+
+.service__icon
+	position: absolute
+	top: 0
+	left: 25px
+	z-index: 1
+	font-size: 30px
+	color: transparent!important
+	-webkit-background-clip: text
+	background-image: linear-gradient(to bottom, #FFC72A, #FFAE23)
+
+.service__title
+	font-size: 15px
+	font-weight: bold
+	text-transform: uppercase
+	margin-bottom: 12px
+
+.service__text
+	font-size: 16px
+	opacity: .7
+	padding-bottom: 20px
+
+
+// MEDIA here
+@media screen and (max-width: 1200px)
+	.service__item
+		width: 50%
+
+@media screen and (max-width: 768px)
+	.service__item
+		width: 100%
+		text-align: center
+		padding-left: 0
+		padding-right: 0
+		padding-top: 70px
+	.service__icon
+		top: -5px
+		left: 50%
+		transform: translateX(-50%)
+		font-size: 50px
+	.service__text
+		width: 100%
+		max-width: 400px
+		margin: 0 auto
+
+@media screen and (max-width: 980px)
+	.section--services
+		padding-top: 15px
+
+@media screen and (max-width: 740px)
+	.section--services
+		padding-top: 0
+	.service__item
+		&:last-child
+			padding-bottom: 30px
+
+@media screen and (max-width: 630px)
+	.portfolio__inner
+		height: 2280px!important

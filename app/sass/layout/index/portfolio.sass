@@ -1,0 +1,115 @@
+/* Section (portfolio) */
+.section--portfolio
+	background: url(../img/@2x/wave.jpg) no-repeat top #F7F8FC
+
+.portfolio-loop
+	width: 70px
+	height: 70px
+	margin: 0 auto
+	background: url("../img/@2x/portfolio_loop.png") center no-repeat
+	background-size: cover
+
+.portfolio__item
+	box-shadow: 1px 1px 18px 2px rgba(0,0,0,.1)
+	overflow: hidden
+	width: 268px
+	height: 500px
+	background-color: antiquewhite
+	display: flex
+	justify-content: center
+	align-items: flex-start
+	border-radius: 20px
+	img
+		display: block
+		width: 100%
+		transition: transform 1s cubic-bezier(.165,.84,.44,1)
+	&:hover img
+		transform: scale(1.1)
+	&:hover p
+		opacity: 1
+	p
+		background-image: linear-gradient( 0deg, rgba(252,227,138,.9) 0, rgba(243,129,129,.9))
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		display: flex
+		justify-content: center
+		flex-direction: column
+		opacity: 0
+		transition: all .5s ease-in-out
+
+.portfolio
+	padding-top: 30px
+
+.portfolio__inner
+	width: calc(100% + 50px)
+	margin: 0 -25px
+	.p-item1
+		margin-top: 100px
+		height: 250px
+	.p-item2
+		img
+			width: auto
+			height: 100%
+	.p-item3
+		height: 400px
+	.p-item4
+		margin-top: 130px
+		height: 700px
+	.p-item5
+		margin-top: 100px
+		height: 450px
+		img
+			width: auto
+			height: 100%
+	.p-item6
+		height: 500px
+		img
+			width: auto
+			height: 100%
+	.p-item7
+		height: 500px
+		img
+			width: auto
+			height: 100%
+	.p-item8
+		height: 700px
+
+.portfolio-bg
+	position: absolute
+	height: 2000px
+	width: 100%
+	top: 540px
+	right: 0
+	background: #fff
+
+
+// MEDIA here
+@media screen and (max-width: 1260px)
+	.portfolio__inner
+		.p-item5
+			margin-top: 0
+		.p-item4, .p-item3, .p-item5
+			margin-top: 100px
+		.p-item7
+			display: none
+		.p-item4
+			height: 500px
+		.p-item3
+			height: 300px
+
+@media screen and (max-width: 942px)
+	.portfolio__inner
+		.p-item4, .p-item3, .p-item5, .p-item1
+			margin-top: 0
+		.p-item6
+			display: none
+		.p-item4
+			height: 555px
+
+@media screen and (max-width: 680px)
+	.portfolio-bg 
+		height: 2300px
+

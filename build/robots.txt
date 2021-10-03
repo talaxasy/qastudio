@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /404.html
+Disallow: *?
+Host: www.qastudio.by
+Sitemap: http://www.qastudio.by/sitemap.xml

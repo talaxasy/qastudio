@@ -1,0 +1,127 @@
+/* Section (event) */
+.section--event
+	background: #e60000
+	padding: 25px 0 35px
+	overflow: unset
+	z-index: 5
+	perspective: 900px
+
+.event-box
+	position: relative
+	text-align: center
+	color: #fff
+	text-shadow: 0 3px 0 $text
+
+.event-img
+	position: absolute
+	display: block
+	border-radius: 10px
+	&:nth-child(1)
+		top: 0
+		left: 90px
+		width: 262px
+		height: 337px
+		background: url(/img/@2x/event1.png) no-repeat
+		background-size: contain
+		z-index: 10
+		transform: rotateY(60deg) rotateX(15deg) rotateZ(-10deg)
+		box-shadow: -8px 13px 0 rgba(black,.4)
+	&:nth-child(2)
+		z-index: 9
+		background: url(/img/@2x/event2.png) no-repeat
+		background-size: contain
+		left: 0
+		top: -70px
+		width: 294px
+		height: 377px
+		transform: rotateY(68deg) rotateX(15deg) rotateZ(-10deg)
+		box-shadow: -8px 13px 0 rgba(black,.4)
+	&:nth-child(3)
+		top: 0
+		right: 80px
+		width: 262px
+		height: 337px
+		z-index: 10
+		background: url(/img/@2x/event2.png) no-repeat
+		background-size: contain
+		transform: rotateY(-45deg) rotateX(15deg) rotateZ(9deg)
+		box-shadow: 8px 13px 0 rgba(black,.4)
+	&:nth-child(4)
+		z-index: 9
+		background: url(/img/@2x/event1.png) no-repeat
+		background-size: contain
+		right: -10px
+		top: -70px
+		width: 294px
+		height: 377px
+		transform: rotateY(-50deg) rotateX(15deg) rotateZ(9deg)
+		box-shadow: 8px 13px 0 rgba(black,.4)
+
+.event-title
+	text-transform: uppercase
+	font-size: 42px
+	&:nth-child(4)
+		font-size: 28px
+
+.event-text
+	max-width: 530px
+	margin: 0 auto
+	font-size: 22px
+	&:nth-child(5)
+		padding-bottom: 20px
+
+.event-btn
+	text-transform: uppercase
+	font-weight: bold
+	padding: 11px 30px
+	font-size: 22px
+	border-radius: 5px
+	background: #fff
+	text-shadow: none
+	color: $text
+	box-shadow: 0 2px 0 $text
+	transition: all linear .2s
+	&:hover
+		color: $text
+		box-shadow: 0 0 21px rgba(#fff, .7)
+
+
+// MEDIA here
+@media screen and (max-width: 1250px)
+	.event-img_group
+		display: none
+
+@media screen and (max-width: 640px)
+	.event-title
+		font-size: 36px
+		&:nth-child(4)
+			font-size: 26px
+	.event-text
+		font-size: 20px
+
+@media screen and (max-width: 565px)
+	.modal-event__title
+		font-size: 32px
+		line-height: 1.2
+	.modal, .modal-event
+		padding: 40px !important
+	.close-modal 
+		top: -30px
+		right: -17px
+	.modal-event__text
+		display: none
+
+@media screen and (max-width: 525px)
+	.event-title
+		font-size: 34px
+		&:nth-child(4)
+			font-size: 24px
+	.event-text
+		font-size: 18px
+	.event-btn
+		font-size: 20px
+
+@media screen and (max-width: 440px)
+	.event-title
+		line-height: 1.3
+

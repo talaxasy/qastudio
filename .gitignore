@@ -1,0 +1,9 @@
+/node_modules/
+/.git/
+/**/Thumbs.db
+/**/*.DS_Store
+ssh.txt.pub
+ssh.txt
+canada.mp4
+canada.ogv
+canada.webm

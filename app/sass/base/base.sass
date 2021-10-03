@@ -1,0 +1,144 @@
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+a
+	color: #fff
+	text-decoration: none
+	&:hover
+		text-decoration: none
+		color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+h1,h2,h3,h4,h5,h6,p
+	margin: 0
+
+b, strong
+	font-weight: bold
+
+*,
+*:before,
+*:after
+	box-sizing: border-box
+	text-decoration: none
+
+button
+	border: none
+	outline: none
+	background: none
+
+body
+	font-size: 16px
+	position: relative
+	line-height: 1.65
+	font-family: $p-text
+	overflow-x: hidden
+	color: $text
+	background: #ececec
+	&::-webkit-scrollbar
+		z-index: 99
+		width: 7px
+	&::-webkit-scrollbar-track
+		z-index: 99
+		background: rgba($accent,0.2)
+	&::-webkit-scrollbar-thumb
+		z-index: 99
+		//border-radius: 100px
+		background: rgba($accent,1)
+
+.no-scroll
+	overflow: hidden
+	position: fixed
+	height: 100%
+	width: 100%
+
+.swal-modal
+	width: 400px
+
+.swal-button
+	font-family: $p-text
+	padding: 8px 35px
+	border-radius: 3px
+	background-color: $accent
+	border: 0
+	font-size: 14px
+	&:not([disabled]):hover
+		background-color: darken($accent, 6%)
+	&:focus
+		box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(165, 127, 43, 0.29)
+
+.swal-footer
+	text-align: center
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.container
+	width: 100%
+	max-width: 1330px
+	margin: 0 auto
+	padding:
+		right: $gutter
+		left: $gutter
+
+.section
+	position: relative
+	overflow: hidden
+	padding: 20px 0 50px 0
+	height: 100%
+	background: #f7f8fc
+
+.section__header
+	width: 900px
+	max-width: 100%
+	margin: 30px auto 40px
+	text-align: center
+
+.title
+	font-size: 35px
+	color: $text
+	font-weight: 700
+	text-transform: uppercase
+	&:after
+		content: ""
+		display: block
+		width: 60px
+		height: 3px
+		background: $accent
+		margin: 30px auto
+		z-index: 1
+
+.section__text
+	font-size: 16px
+	opacity: .6
+
+// Animations
+.fade
+	animation-name: fade
+	animation-duration: 0.3s
+
+@keyframes fade
+	from
+		opacity: 0
+	to
+		opacity: .9
+
+
+// MEDIA here
+@media screen and (max-width: 400px)
+	.title
+		font-size: 28px
+		line-height: 1.35
+	.section__text
+		font-size: 14px
